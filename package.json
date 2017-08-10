@@ -2,7 +2,9 @@
   "name": "egg-mongodb",
   "version": "1.0.0",
   "description": "A mongodb adapter for egg.js",
-  "dependencies": {},
+  "dependencies": {
+    "mongodb": "^2.2.31"
+  },
   "devDependencies": {
     "autod": "^2.8.0",
     "egg-bin": "^3.4.0",
