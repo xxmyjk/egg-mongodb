@@ -1,4 +1,4 @@
-# egg-mongo
+# egg-mongodb
 
 A mongodb adapter for egg.js
 
@@ -28,5 +28,5 @@ A mongodb adapter for egg.js
 ## Usage
 
 ```bash
-npm i egg-mongo --save
+npm i egg-mongodb --save
 ```
