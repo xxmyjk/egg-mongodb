@@ -1,7 +1,7 @@
-const mongodb = require('./lib/mongodb');
+const create = require('./lib/create');
 
 module.exports = app => {
-    if (app.config.mongodb) {
-        mongodb(app);
+    if (app.config.mongodb.app) {
+        app.addSingleton('mongodb', create);
     }
 };
