@@ -1,5 +1,5 @@
 {
-  "name": "egg-mongo",
+  "name": "egg-mongodb",
   "version": "1.0.0",
   "description": "A mongodb adapter for egg.js",
   "dependencies": {},
