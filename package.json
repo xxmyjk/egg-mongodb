@@ -1,9 +1,10 @@
 {
   "name": "egg-mongodb",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A mongodb adapter for egg.js",
   "eggPlugin": {
-    "name": "mongodb"
+    "name": "mongodb",
+    "dependencies": ["mongodb"]
   },
   "dependencies": {
     "mongodb": "^2.2.31"
@@ -33,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:xxmyjk/egg-mongodb.git"
   },
   "files": [
     "index.js"
