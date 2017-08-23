@@ -1,6 +1,6 @@
 {
   "name": "egg-mongodb",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A mongodb adapter for egg.js",
   "eggPlugin": {
     "name": "mongodb"
