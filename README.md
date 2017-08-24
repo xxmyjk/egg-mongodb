@@ -15,7 +15,7 @@ add configure in your `config.default.js` or other environment.
 ```javascript
    module.exports = appInfo => {
         const config = {};
-    
+
         // add your config here
         config.mongodb = {
             app: true,
@@ -43,7 +43,7 @@ add configure in your `config.default.js` or other environment.
             //     query: ''
             // }
         };
-    
+
         return config;
    }
 ```
@@ -57,7 +57,7 @@ open this plugin in your `plugin.js` like this.
         // path: your_local_folder_path
         package: 'egg-mongodb'
     };
-``` 
+```
 
 The mongodb connect string parse logic is like this.
 
@@ -86,15 +86,15 @@ Since the [mongodb connection string](https://docs.mongodb.com/manual/reference/
 After add this plugin in your application, an Object named `mongodb` will be added to the `app instance`. You can access it like this.
 
 
-In your `controller` file: 
+In your `controller` file:
 ```javascript
     'use strict';
-    
+
     module.exports = app => {
         class UserController extends app.Controller {
             async search() {
                 let db = this.app.mongodb;
-                   
+
                 let result = await db.collection('user').findOne({
                     // some query here
                     name: 'xxmy'
@@ -103,11 +103,11 @@ In your `controller` file:
                     phone: 1
                 });
 
-                this.ctx.body = result; 
+                this.ctx.body = result;
             }
         }
     }
-``` 
+```
 
 Or in your `service` file:
 
@@ -118,18 +118,18 @@ Or in your `service` file:
         class UserService extends app.Service {
             async register() {
                 let db = this.app.mongodb;
-                
+
                 let User = db.collection('user');
-                
+
                 let rs;
                 try {
                     let info = await User.insertOne({
                         name: 'zhang san',
                         phone: '177xxxxxxxx'
                     });
-                    
+
                     this.app.logger.log(info);
-                    
+
                     rs = {
                         code: '0',
                         content: 'user register ok'
@@ -142,11 +142,11 @@ Or in your `service` file:
                         content: e.message || 'unknown error'
                     }
                 }
-                
+
                 return rs;
             }
         }
-    
+
         return UserService;
     };
 ```
@@ -177,8 +177,8 @@ The `url`, `destroy' and `connect` attribute in `mongodb` instance is useless an
 AND DO NOT TRY TO EDIT THESE ATTRS MANUALLY.
 
 These problems should be fixed after.
- 
+
 ## Thanks To
 
-This package is almost a fully copy from [mzTeamMeatMan](https://github.com/) \'s  [egg-mongo](https://github.com/mzTeamMeatMan/egg-mongo).
+This package is almost a fully copy from [brickyang](https://github.com/brickyang) \'s  [egg-mongo](https://github.com/brickyang/egg-mongo).
 Just removing some unnecessary functions and make it more easy to use.
