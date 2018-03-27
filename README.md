@@ -22,23 +22,20 @@ add configure in your `config.default.js` or other environment.
             agent: false,
             username: '',
             password: '',
-            host: '127.0.0.1',
-            port: '27017',
+            hosts: '127.0.0.1:27017',
             db: 'test',
             query: '',
             // defalut: {
             //     username: '',
             //     password: '',
-            //     host: '127.0.0.1',
-            //     port: '27017',
+            //     hosts: '127.0.0.1:27017',
             //     db: 'test',
             //     query: ''
             // },
             // client: {
             //     username: '',
             //     password: '',
-            //     host: '127.0.0.1',
-            //     port: '27017',
+            //     hosts: '127.0.0.1:27017',
             //     db: 'test',
             //     query: ''
             // }
