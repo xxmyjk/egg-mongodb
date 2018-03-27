@@ -69,7 +69,7 @@ The mongodb connect string parse logic is like this.
         }
     }
 
-    url += `${config.host}:${config.port}/${config.db}`;
+    url += `${config.hosts}/${config.db}`;
 
     if (config.query) {
         url += `?${config.query}`;
